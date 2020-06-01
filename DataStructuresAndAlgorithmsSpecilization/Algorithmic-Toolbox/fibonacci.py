@@ -8,13 +8,13 @@ if __name__ == '__main__':
     n = int(input().strip())
     f1 = 0
     f2 = 1
-    a = 0
+    total = 0
     arr_fibonacci = [1]
     for i in range(0, n):
-        a = f1 + f2
+        total = f1 + f2
         f1 = f2
-        f2 = a
-        arr_fibonacci.append(a)
+        f2 = total
+        arr_fibonacci.append(total)
     print(arr_fibonacci)
     print('\n')
     arr_fibonacci_recursion = []
