@@ -74,11 +74,7 @@ if __name__ == '__main__':
     for i in range(0, N):
         if i == center_row:
             msg_welcome = 'WELCOME'
-            result_design_msg_welcome = design_string('-',
-                                                      center_col - len(msg_welcome) // 2) + msg_welcome + design_string(
-                '-',
-                center_col - len(
-                    msg_welcome) // 2)
+            result_design_msg_welcome = design_string('-', center_col - len(msg_welcome) // 2) + msg_welcome + design_string('-', center_col - len(msg_welcome) // 2)
             print(result_design_msg_welcome)
         else:
             number_pattern = 2 * i + 1 if i < center_row else 2 * (N - i) - 1
