@@ -85,6 +85,24 @@ def solution2(n):
         print(result)
 
 
+def solution3(n):
+    alphabet = string.ascii_lowercase
+    row = 2 * n - 1
+    col = 4 * n - 3
+    if n < 1 or n > 26:
+        print("Too limited")
+        quit()
+    for i in range(0, row):
+        designAlphabet = ''
+        begin = n - i - 1 if i <= row / 2 else i - n + 1
+        for j in range(begin, n):
+            character = alphabet[j]
+            designAlphabet = designAlphabet + character if designAlphabet == '' \
+                else character + '-' + designAlphabet + '-' + character
+        pattern = '-' * int((col - len(designAlphabet)) / 2)
+        print(pattern + designAlphabet + pattern)
+
+
 def pythonSolution(n):
     alphabet = string.ascii_lowercase
     col = 4 * n - 3
@@ -97,9 +115,11 @@ def pythonSolution(n):
 
 if __name__ == '__main__':
     size = int(input())
-    print("Solution 1")
-    solution1(size)
-    print("Solution 2")
-    solution2(size)
-    print("Python Solution")
-    pythonSolution(size)
+    # print("Solution 1")
+    # solution1(size)
+    # print("Solution 2")
+    # solution2(size)
+    # print("Python Solution")
+    # pythonSolution(size)
+    print("Solution 3")
+    solution3(size)
