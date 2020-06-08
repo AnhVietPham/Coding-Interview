@@ -86,20 +86,20 @@ def solution2(n):
 
 
 def solution3(n):
-    alphabet = string.ascii_lowercase
-    row = 2 * n - 1
-    col = 4 * n - 3
-    if n < 1 or n > 26:
+    if n < 1 or n > 21:
         print("Too limited")
         quit()
+    alphabet = string.ascii_lowercase
+    col = 4 * n - 3
+    row = 2 * n - 1
     for i in range(0, row):
         designAlphabet = ''
-        begin = n - i - 1 if i <= row / 2 else i - n + 1
+        begin = n - i - 1 if i < row / 2 else i - n + 1
         for j in range(begin, n):
             character = alphabet[j]
             designAlphabet = designAlphabet + character if designAlphabet == '' \
                 else character + '-' + designAlphabet + '-' + character
-        pattern = '-' * int((col - len(designAlphabet)) / 2)
+        pattern = '-' * (int((col - len(designAlphabet)) / 2))
         print(pattern + designAlphabet + pattern)
 
 

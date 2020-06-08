@@ -34,11 +34,7 @@ def euclidRecursionGCD(a1, b1):
 
 if __name__ == '__main__':
     a, b = map(int, input().split(' '))
-    print(normalGCD(a, b))
-    print(euclidGCD(a, b))
     if a > b:
         print(euclidGCD2(a, b))
-        print(euclidRecursionGCD(a, b))
     else:
         print(euclidGCD2(b, a))
-        print(euclidRecursionGCD(b, a))
