@@ -115,11 +115,11 @@ def pythonSolution(n):
 
 if __name__ == '__main__':
     size = int(input())
-    # print("Solution 1")
-    # solution1(size)
-    # print("Solution 2")
-    # solution2(size)
-    # print("Python Solution")
-    # pythonSolution(size)
+    print("Solution 1")
+    solution1(size)
+    print("Solution 2")
+    solution2(size)
+    print("Python Solution")
+    pythonSolution(size)
     print("Solution 3")
     solution3(size)
