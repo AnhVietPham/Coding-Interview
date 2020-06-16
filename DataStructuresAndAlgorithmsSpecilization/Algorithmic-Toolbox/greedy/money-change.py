@@ -8,3 +8,4 @@ if __name__ == '__main__':
             n = n % i
             if n == 0:
                 print(count)
+                break
