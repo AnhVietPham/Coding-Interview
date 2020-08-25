@@ -22,4 +22,4 @@ def maxBelowSolution2(arr, k):
 if __name__ == '__main__':
     arrNumber = [5, 3, 6, 4, 8, 11]
     print(maxBelowSolution(arrNumber, 5))
-    print(maxBellowSolution2(arrNumber,5))
+    print(maxBelowSolution2(arrNumber,5))
